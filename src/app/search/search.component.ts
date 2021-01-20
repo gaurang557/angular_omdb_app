@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.omdbservice.movietitle)
     this.omdbservice.searchmovies().subscribe(
-      res=>this.SearchSuccess(res),
+      r=>this.SearchSuccess(r),
       err=>this.searcherror(err)
     )
     

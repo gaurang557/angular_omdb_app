@@ -1,4 +1,5 @@
 <div class ="background">
+    <span style="padding-left:600px"></span>
     <input [(ngModel)]="movietitle" class="search" />
     <button (click)="onbuttonclick()">Search</button>
 </div>
@@ -11,6 +12,9 @@
             </div>
             <div>
                 <p>{{movie.Title}}</p>
+                <p>Type {{movie.Type}}</p>
+                <p>Year {{movie.Year}}</p>
+                <p>imdbID {{movie.imdbID}}</p>
             </div>
 
         </div>
