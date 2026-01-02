@@ -1,12 +1,78 @@
-.background{
-    height: 300px;
+/* Background Section */
+.background {
+    background-color: #f4f4f9; /* Light background color */
+    padding: 40px 0;
 }
-.container{
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
-    height: 100%;
+    padding: 20px;
 }
-#heading{
-    background-color: rgb(133, 152, 240);
-    font-size: 24px;
+
+/* Heading Styling */
+#heading {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #333;
     margin-bottom: 20px;
+}
+
+/* Search Bar Styling */
+.search {
+    padding: 12px;
+    font-size: 1.1em;
+    width: 280px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 15px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px; /* spacing between input and button */
+}
+
+/* Input Focus Effect */
+.search:focus {
+    border-color: #4CAF50;  /* Green border on focus */
+    outline: none;
+}
+
+/* Button Styling */
+.search-btn {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;  /* spacing between input and button */
+}
+
+/* Button Hover Effect */
+.search-btn:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .search {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    #heading {
+        font-size: 1.4em;  /* Slightly smaller heading on mobile */
+        margin-bottom: 15px;
+    }
 }

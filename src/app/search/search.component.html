@@ -1,22 +1,24 @@
-<div class ="background">
-    <span style="padding-left:600px"></span>
-    <input [(ngModel)]="movietitle" class="search" />
-    <button (click)="onbuttonclick()">Search</button>
+<div class="background">
+    <div class="search-bar">
+        <input [(ngModel)]="movietitle" class="search" placeholder="Search for movies..." />
+        <button (click)="onbuttonclick()" class="search-button">Search</button>
+        <button (click)="onBack()" class="search-button" style="background-color: blue;">Back</button>
+
+    </div>
 </div>
-<br>
+
 <div class="container">
     <div class="row">
-        <div class="col" *ngFor= "let movie of movies">
-            <div class="card"  style="width: 18rem">
-                <img style="width: 18rem;" src={{movie.Poster}}>
+        <div class="col" *ngFor="let movie of movies">
+            <div class="card">
+                <img class="card-img" [src]="movie.Poster" alt="{{movie.Title}}" />
+                <div class="card-body">
+                    <h5 class="card-title">{{movie.Title}}</h5>
+                    <p class="card-type">Type: {{movie.Type}}</p>
+                    <p class="card-year">Year: {{movie.Year}}</p>
+                    <p class="card-id">IMDb ID: {{movie.imdbID}}</p>
+                </div>
             </div>
-            <div>
-                <p>{{movie.Title}}</p>
-                <p>Type {{movie.Type}}</p>
-                <p>Year {{movie.Year}}</p>
-                <p>imdbID {{movie.imdbID}}</p>
-            </div>
-
         </div>
     </div>
 </div>

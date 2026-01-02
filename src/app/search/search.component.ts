@@ -32,6 +32,9 @@ export class SearchComponent implements OnInit {
     )
     
   }
+  onBack(){
+    this.router.navigate(['./index'])
+  }
   SearchSuccess(res: any){
     this.movies=res.Search
     console.log(res)
