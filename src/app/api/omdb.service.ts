@@ -14,7 +14,7 @@ export class OmdbService {
     private http:HttpClient
   ) { }
   searchmovies():Observable<any>{
-    const url=`https://www.omdbapi.com/?apikey=a0e14d81&s=`+this.movietitle;
+    const url=`https://www.omdbapi.com/?apikey=a0e14d81&s=${this.movietitle}`;
     return this.http.get(url)
   }
 }
