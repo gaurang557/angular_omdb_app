@@ -5,7 +5,11 @@
     flex-wrap: wrap;
     margin-top: 20px;
 }
-
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 /* Column layout */
 .col {
     margin: 15px;
